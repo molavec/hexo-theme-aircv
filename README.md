@@ -1,7 +1,8 @@
-# aircv Hexo Theme
+# Aircv Hexo Theme
 
 This is Hexo Theme with a beautiful style design form [KeenThemes](http://www.keenthemes.com/).
-Is very usefull for personal branding.
+
+**Is very usefull for personal branding.**
 
 ![model for landing in devices](doc/aircv.png)
 
