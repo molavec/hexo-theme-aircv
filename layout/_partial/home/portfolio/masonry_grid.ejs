@@ -1,0 +1,52 @@
+
+<%
+// adds default data usign "theme/aircv/scripts/default_data.js" helper
+let portfolio = (site.data.portfolio !== undefined) ? site.data.portfolio : default_data('portfolio');
+%>
+
+<!-- Masonry Grid -->
+<div class="masonry-grid row row-space-2">
+
+  <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+
+  <% portfolio.items.forEach(item => { %>
+    <div class="masonry-grid-item <%= item.grid_class %>">
+      <!-- Work -->
+      <div class="work work-popup-trigger">
+          <div class="work-overlay">
+              <img class="full-width img-responsive" src="<%= item.image %>" alt="Portfolio Image">
+          </div>
+          <div class="work-popup-overlay">
+              <div class="work-popup-content">
+                  <a href="javascript:void(0);" class="work-popup-close"><%= item.popup.hide_text %></a>
+                  <div class="margin-b-30">
+                      <h3 class="margin-b-5"><%= item.popup.hide_text %></h3>
+                      <span><%- item.popup.subtitle %></span>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            <%- item.popup.description %>
+                              <ul class="list-inline work-popup-tag">
+                                  <% item.popup.tags.forEach( tag => { %>
+                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="<%= tag.href %>"><%= tag.text %></a></li>
+                                  <% }) %>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            <% item.popup.parameters.forEach( param => { %>
+                              <p class="margin-b-5"><strong><%= param.title %>:</strong> <%- param.text %></p>
+                            <% }) %>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Work -->
+  </div>
+  <% }); %>
+</div>
+<!-- End Masonry Grid -->

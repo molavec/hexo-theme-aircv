@@ -1,0 +1,19 @@
+title: Experience
+subtitle: Batman would be jealous.
+
+items:
+  - title: HTML5/CSS3
+    content: "Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor"
+    href: "#"
+    icon: "icon-chemistry"
+    featured: false
+  - title: Photoshop
+    content: "Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor"
+    href: "#"
+    icon: "color-white icon-screen-tablet"
+    featured: true
+  - title: Front-end
+    content: "Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor"
+    href: "#"
+    icon: "icon-badge"
+    featured: false

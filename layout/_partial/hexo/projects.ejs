@@ -1,0 +1,35 @@
+<section id="why-dessiner" class="grey-bg">
+  <div id="why-content" class="content content-width">
+    <h2>Desarrollos</h2>
+    <div class="content content-width">
+      <p>
+        Cada paso es una nueva experiencia para la vida y para alcanzar los sueños.
+        <br>
+        Selecciona alguno de los proyectos para conocer más.
+      </p>
+    </div>
+
+    <div class="features">
+
+      <% // TODO: falta el filtrar que sean solo los post con tag desarrollo y limitar la cantidad a 4
+      page.posts
+        .filter((post)=>((post.tags.length > 0) ? /desarrollo/.test(post.tags.data[0].name) : false))
+        .sort('date', -1)
+        .limit(4)
+        .forEach(post => { %>
+        <div class="feature">
+        <amp-img src="<%= post.path %><%= post.thumb_image %>" layout="responsive" width="250" height="250" alt="feature-1">
+        </amp-img>
+        <div class="feature-info">
+          <h3><a href="<%= post.path %>"><%= post.title %></a></h3>
+          <%= post.description %>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+
+    <div class="meta">
+      <a href="projects" class="mt-20 button" aria-label="shop-now">Conoce más</a>
+    </div>
+
+</section>

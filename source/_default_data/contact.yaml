@@ -1,0 +1,16 @@
+title: Contacts
+subtitle: Hire me.
+
+items:
+  - title: Location
+    content: Brookyln, New York
+    href: "#"
+  - title: Phone
+    content: +77 234 548 00 00
+    href: "#"
+  - title: Email
+    content: alex.teseira@gmail.com
+    href: "#"
+  - title: Web
+    content: alex.teseira.com
+    href: "#"

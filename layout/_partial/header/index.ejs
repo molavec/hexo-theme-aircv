@@ -1,0 +1,61 @@
+
+<%
+// adds default data usign "theme/aircv/scripts/default_data.js" helper
+let logo = (site.data.logo !== undefined) ? site.data.logo : default_data('logo');
+let menu = (site.data.menu !== undefined) ? site.data.menu : default_data('menu');
+%>
+
+<!--========== HEADER ==========-->
+<header class="header navbar-fixed-top">
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="menu-container js_nav-item">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="toggle-icon"></span>
+              </button>
+
+              <!-- Logo -->
+              <div class="logo">
+                <!-- En caso de una text -->
+                <% if(logo.text && logo.text_dark) { %>
+                    <a class="logo-wrap" href="<%= (path === 'index.html' ) ? '#body' : '/#body' %>">
+                        <span class="logo-img logo-img-main"> <%- logo.text %> </span>
+                        <span class="logo-img logo-img-active"> <%- logo.text_dark %> </span>
+                    </a>
+                <% } else { %>
+                    <a class="logo-wrap" href="<%= (path === 'index.html' ) ? '#body' : '/#body' %>" style="text-decoration: none;" >
+                        <img class="logo-img logo-img-main" src="<%= logo.image %>" alt="Asentus Logo">
+                        <img class="logo-img logo-img-active" src="<%= logo.image_dark %>" alt="Asentus Logo">
+                    </a>
+                <% }  %>
+              </div>
+              <!-- End Logo -->
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse nav-collapse">
+              <div class="menu-container">
+                  <ul class="nav navbar-nav navbar-nav-right">
+                      <%# Menu %>
+                      <% menu.forEach(menu => { %>
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="<%= (path === "index.html" ) ? menu.href : `/${menu.href}` %>"
+                            >
+                            <%=menu.text %>
+                        </a>
+                        </li>
+                      <% }); %>
+                  </ul>
+              </div>
+          </div>
+          <!-- End Navbar Collapse -->
+      </div>
+  </nav>
+  <!-- Navbar -->
+
+</header>
+<!--========== END HEADER ==========-->

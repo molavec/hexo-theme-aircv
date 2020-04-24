@@ -1,0 +1,34 @@
+
+<%
+// adds default data usign "theme/aircv/scripts/default_data.js" helper
+let contact = (site.data.contact !== undefined) ? site.data.contact : default_data('contact');
+%>
+
+
+<!-- Contact -->
+<div id="contact">
+  <div class="bg-color-sky-light">
+      <div class="container content-lg">
+          <div class="row">
+              <div class="col-sm-3 sm-margin-b-30">
+                  <div class="text-right sm-text-left">
+                      <h2 class="margin-b-0"><%= contact.title %></h2>
+                      <p><%- contact.subtitle %></p>
+                  </div>
+              </div>
+              <div class="col-sm-8 col-sm-offset-1">
+                  <div class="row">
+                    <% contact.items.forEach(item => { %>
+                        <div class="col-md-3 col-xs-6 md-margin-b-30">
+                            <h5><%= item.title %></h5>
+                            <a href="<%= item.href %>"><%= item.content %></a>
+                        </div>
+                    <% }); %>
+                  </div>
+              </div>
+          </div>
+          <!--// end row -->
+      </div>
+  </div>
+</div>
+<!-- End Contact -->

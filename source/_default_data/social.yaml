@@ -1,0 +1,29 @@
+- text: Facebook
+  href: "#"
+  #icon: "fab fa-facebook"
+  icon: icon-social-facebook
+
+- text: Instagram
+  href: "#"
+#  #icon: "fab fa-instagram"
+  icon: "icon-social-instagram"
+
+- text: Twitter
+  href: "#"
+  #icon: "fab fa-twitter"
+  icon: "icon-social-twitter"
+
+- text: Linkedin
+  href: "#"
+  #icon: "fab fa-linkedin-in"
+  icon: "icon-social-linkedin"
+
+- text: Dribbble
+  href: "#"
+  #icon: "fab fa-dribbble-in"
+  icon: "icon-social-dribbble"
+
+#- text: Behance
+#  href: "#"
+#  #icon: "fab fa-behance-in"
+#  icon: "icon-social-behance"

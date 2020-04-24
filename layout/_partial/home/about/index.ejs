@@ -1,0 +1,37 @@
+
+<%
+// adds default data usign "theme/aircv/scripts/default_data.js" helper
+let about = (site.data.about !== undefined) ? site.data.about : default_data('about');
+%>
+
+<!-- About -->
+<div id="about">
+  <div class="container content-lg">
+      <div class="row">
+          <div class="col-sm-3 sm-margin-b-30">
+              <div class="text-right sm-text-left">
+                  <h2 class="margin-b-0"><%- about.title %></h2>
+                  <p><%- about.subtitle %></p>
+              </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-1">
+              <div class="margin-b-60">
+                <p><%- about.description %></p>
+              </div>
+
+              <!-- Progress Box -->
+              <% about.skills.forEach(skill => { %>
+                <div class="progress-box">
+                    <h5> <%= skill.name %> <span class="color-heading pull-right"><%= skill.percentage %>%</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="<%= skill.percentage %>"></div>
+                    </div>
+                </div>
+              <% }); %>
+              <!-- End Progress Box -->
+          </div>
+      </div>
+      <!--// end row -->
+  </div>
+</div>
+<!-- End About -->

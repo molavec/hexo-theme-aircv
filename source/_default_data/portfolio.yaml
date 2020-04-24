@@ -1,0 +1,139 @@
+title: Works
+subtitle: I build the real value.
+
+items:
+#1
+  - grid_class: "col-xs-12 col-sm-6 col-md-8 margin-b-4"
+    image: "img/800x400/01.jpg"
+    popup:
+      hide_text: "Hide"
+      title: "Art Of Coding"
+      subtitle: "Clean &amp; Minimalistic Design"
+      description: "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+      "
+      tags:
+        - text: "Design, "
+          href: "https://keenthemes.com/"
+        - text: "Coding, "
+          href: "https://keenthemes.com/"
+        - text: "Portfolio"
+          href: "https://keenthemes.com/"
+      parameters:
+        - title: "Project Leader"
+          text: "John Doe"
+        - title: "Designer"
+          text: "Keenthemes"
+        - title: "Developer"
+          text: " Alisa Keys"
+        - title: "Customer"
+          text: "Mark Doe"
+
+#2
+  - grid_class: "col-xs-12 col-sm-6 col-md-4 margin-b-4"
+    image: "img/397x400/01.jpg"
+    popup:
+      hide_text: "Hide"
+      title: "Art Of Coding"
+      subtitle: "Clean &amp; Minimalistic Design"
+      description: "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+      "
+      tags:
+        - text: "Design, "
+          href: "https://keenthemes.com/"
+        - text: "Coding, "
+          href: "https://keenthemes.com/"
+        - text: "Portfolio"
+          href: "https://keenthemes.com/"
+      parameters:
+        - title: "Project Leader"
+          text: "John Doe"
+        - title: "Designer"
+          text: "Keenthemes"
+        - title: "Developer"
+          text: " Alisa Keys"
+        - title: "Customer"
+          text: "Mark Doe"
+
+#3
+  - grid_class: "col-xs-12 col-sm-6 col-md-4 md-margin-b-4"
+    image: "img/397x300/01.jpg"
+    popup:
+      hide_text: "Hide"
+      title: "Art Of Coding"
+      subtitle: "Clean &amp; Minimalistic Design"
+      description: "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+      "
+      tags:
+        - text: "Design, "
+          href: "https://keenthemes.com/"
+        - text: "Coding, "
+          href: "https://keenthemes.com/"
+        - text: "Portfolio"
+          href: "https://keenthemes.com/"
+      parameters:
+        - title: "Project Leader"
+          text: "John Doe"
+        - title: "Designer"
+          text: "Keenthemes"
+        - title: "Developer"
+          text: " Alisa Keys"
+        - title: "Customer"
+          text: "Mark Doe"
+
+
+#4
+  - grid_class: "col-xs-12 col-sm-6 col-md-4 md-margin-b-4"
+    image: "img/397x300/02.jpg"
+    popup:
+      hide_text: "Hide"
+      title: "Art Of Coding"
+      subtitle: "Clean &amp; Minimalistic Design"
+      description: "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+      "
+      tags:
+        - text: "Design, "
+          href: "https://keenthemes.com/"
+        - text: "Coding, "
+          href: "https://keenthemes.com/"
+        - text: "Portfolio"
+          href: "https://keenthemes.com/"
+      parameters:
+        - title: "Project Leader"
+          text: "John Doe"
+        - title: "Designer"
+          text: "Keenthemes"
+        - title: "Developer"
+          text: " Alisa Keys"
+        - title: "Customer"
+          text: "Mark Doe"
+
+#5
+  - grid_class: "col-xs-12 col-sm-6 col-md-4"
+    image: "img/397x300/03.jpg"
+    popup:
+      hide_text: "Hide"
+      title: "Art Of Coding"
+      subtitle: "Clean &amp; Minimalistic Design"
+      description: "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+      "
+      tags:
+        - text: "Design, "
+          href: "https://keenthemes.com/"
+        - text: "Coding, "
+          href: "https://keenthemes.com/"
+        - text: "Portfolio"
+          href: "https://keenthemes.com/"
+      parameters:
+        - title: "Project Leader"
+          text: "John Doe"
+        - title: "Designer"
+          text: "Keenthemes"
+        - title: "Developer"
+          text: " Alisa Keys"
+        - title: "Customer"
+          text: "Mark Doe"

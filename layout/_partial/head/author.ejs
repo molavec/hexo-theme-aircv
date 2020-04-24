@@ -1,0 +1,6 @@
+<%# Author %>
+<% if(page.author) { %>
+  <meta name="author" content="<%= page.author %>">
+<% } else { %>
+  <meta name="author" content="<%= config.author %>">
+<% } %>

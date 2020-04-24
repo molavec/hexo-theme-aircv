@@ -1,0 +1,20 @@
+#post {
+  padding: 80px 60px;
+
+  h1, h2, h3, h4, h5 {
+    margin-top: 80px;
+    margin-top: 60px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: $screen-sm-max) {
+  #post {
+    padding: 20px 40px;
+  }
+}
+

@@ -1,0 +1,11 @@
+{
+  "name": "aircv-hexo-theme",
+  "version": "1.0.0",
+  "description": "Hexo theme based in aircv.",
+  "repository": "https://github.com/molavec/aircv-hexo-theme",
+  "author": "Miguel Olave",
+  "license": "MIT",
+  "devDependencies": {
+    "js-yaml": "^3.13.1"
+  }
+}

@@ -1,0 +1,24 @@
+
+<%
+// adds default data usign "theme/aircv/scripts/default_data.js" helper
+let portfolio = (site.data.portfolio !== undefined) ? site.data.portfolio : default_data('portfolio');
+%>
+
+<!-- Portfolio -->
+<div id="work">
+  <div class="container content-lg">
+      <div class="row">
+          <div class="col-sm-3 sm-margin-b-30">
+              <div class="text-right sm-text-left">
+                  <h2 class="margin-b-0"><%= portfolio.title %></h2>
+                  <p><%- portfolio.subtitle %></p>
+              </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-1">
+            <%- partial('masonry_grid') %>
+          </div>
+      </div>
+      <!--// end row -->
+  </div>
+</div>
+<!-- Portfolio -->
