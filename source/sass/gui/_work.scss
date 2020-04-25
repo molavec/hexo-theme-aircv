@@ -6,7 +6,7 @@
 .work {
 	@include position(relative);
 	display: block;
-	
+
 	.work-overlay {
 		@include position(relative);
 		cursor: pointer;
@@ -26,6 +26,22 @@
 		        @include bg-opacity(#000, .5);
 		        @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 		    }
+		}
+	}
+
+	.work-overlay-label{
+    position: absolute;
+    bottom: 0px;
+		background: $color-base;
+		opacity: 0.8;
+    text-align: right;
+    width: 100%;
+		padding: 5px 30px;
+
+		p {
+			color: $color-white;
+			margin-bottom: 0px;
+			font-weight: 700;
 		}
 	}
 }
@@ -48,7 +64,7 @@
 		    	opacity: 1;
 		    	visibility: visible;
 		    	@include visibility-backface(visible);
-				@include cubic-transition($delay: 0, $duration: 300ms, $property: (all));		
+				@include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 			}
 		}
 
@@ -99,7 +115,12 @@
 		}
 
 		&-link {
-			@include font($size: 13px);
+			@include font($size: 13px, $weight: 500, $color: $color-link);
 		}
-	}	
+
+		&-text {
+			@include font($size: 13px, $weight: 500);
+		}
+
+	}
 }

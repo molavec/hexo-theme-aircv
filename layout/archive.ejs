@@ -1,1 +1,44 @@
-<%- partial('_partial/hexo/archive', {pagination: config.archive, index: true}) %>
+<section id="blog">
+
+  <%# TODO: añadir buscador
+  <div class="search">
+    Search goes here!
+  </div>
+  %>
+
+  <div class="container">
+    <div class="content content-width row">
+
+      <%# --- post list block --- %>
+      <div class="post-list-container col-md-8">
+        <% page.posts.each( (post, index) => { %>
+          <% if( index === 0) { %>
+            <%- partial('_partial/hexo/archive_item/first_post_item', {post: post}) %>
+          <% } else { %>
+            <%- partial('_partial/hexo/archive_item/post_item', {post: post}) %>
+          <% } %>
+          <% }) %>
+
+        <%# --- pagination --- %>
+        <% if (page.total > 1){ %>
+          <nav id="page-nav">
+            <% var prev_text = "<" + __(' ');var next_text = __(' ') + ">"%>
+            <%- paginator({
+              prev_text: prev_text,
+              next_text: next_text
+            }) %>
+          </nav>
+        <% } %>
+      <%# --- end pagination --- %>
+
+      </div>
+      <%# --- end post list block --- %>
+
+      <%# widgets %>
+      <%# TODO: añadir widgets
+      <div class="widget-list-container col-md-4">Widget goes here</div>
+      %>
+
+    </div>
+  </div>
+</section>

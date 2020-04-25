@@ -26,6 +26,8 @@
 // =================================================================
 
 @import 'base/base'; // Base
+@import 'base/blog'; // blog
+@import 'base/page'; // page
 @import 'base/post'; // post
 
 
@@ -35,6 +37,7 @@
 @import 'components/button'; // Button
 @import 'components/progress-bar'; // Progress Bar
 @import 'components/social-icons'; // Social Icons
+@import 'components/page-nav'; // Page Nav
 
 
 // Gui
@@ -49,6 +52,7 @@
 // =================================================================
 
 @import 'layout/footer'; // Footer
+@import 'layout/contact'; // Contact
 @import 'layout/header'; // Header
 
 

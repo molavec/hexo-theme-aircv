@@ -123,6 +123,15 @@ h4 { @include font($size: 22px); }
     text-decoration: none;
 }
 
+.video-container{
+    width: 100%;
+    text-align: center;
+    iframe {
+        min-width: 80%;
+        height: calc(100vw * 9/16 - 20vw * 9/16);
+    }
+}
+
 @media (max-width: $screen-sm-max) {
     p {
         @include font($size: 18px, $weight: 400, $family: $font-family-base);

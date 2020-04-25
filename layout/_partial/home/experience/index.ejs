@@ -29,7 +29,7 @@ let experience = (site.data.experience !== undefined) ? site.data.experience : d
                                     <p class=" <% if(item.featured) { %> color-white <% } %>"><%- item.content %></p>
                                     <% if(item.button) { %>
                                         <div class="service-button">
-                                            <button class="btn btn-theme <%= if(item.featured) ? 'btn-white-bg' : 'btn-default-bg' %>"> <%= item.button %> </button>
+                                            <button class="btn btn-theme <%= (item.featured) ? 'btn-white-bg' : 'btn-default-bg' %>"> <%= item.button %> </button>
                                         </div>
                                     <% } %>
                                 </div>

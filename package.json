@@ -6,6 +6,8 @@
   "author": "Miguel Olave",
   "license": "MIT",
   "devDependencies": {
+    "image-size": "^0.8.3",
+    "imageinfo": "^1.0.4",
     "js-yaml": "^3.13.1"
   }
 }

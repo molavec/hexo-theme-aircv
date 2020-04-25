@@ -1,6 +1,8 @@
 <%# Description %>
 <% if(page.description) { %>
   <meta name="description" content="<%= page.description %>">
+<% } else if(config.description) { %>
+  <meta name="description" content="<%= config.description %>">
 <% } else { %>
   <meta name="description" content="<%= config.description %>">
 <% } %>

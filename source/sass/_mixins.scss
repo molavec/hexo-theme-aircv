@@ -21,12 +21,13 @@
 // --------------------------------------------------
 
 // eg: @include font($size: 14px, $style: italic, $weight: 400, $variant: normal, $family: $font-family-base);
-@mixin font($size: null, $style: null, $weight: null, $variant: null, $family: null) {
+@mixin font($size: null, $style: null, $weight: null, $variant: null, $family: null, $color: null) {
     font-size: $size;
     font-style: $style;
     font-weight: $weight;
     font-variant: $variant;
     font-family: $family;
+    color: $color;
 }
 
 

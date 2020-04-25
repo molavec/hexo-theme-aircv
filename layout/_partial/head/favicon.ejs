@@ -1,3 +1,25 @@
-  <%# Favicon %>
-  <%# TODO: Seleccionar el favicon desde el config.yml %>
+<%# Favicon %>
+
+<% if (config.favicon_all) { %>
+  <link rel="apple-touch-icon" sizes="57x57" href="<%= config.favicon_all %>/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="<%= config.favicon_all %>/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<%= config.favicon_all %>/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<%= config.favicon_all %>/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<%= config.favicon_all %>/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="<%= config.favicon_all %>/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="<%= config.favicon_all %>/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="<%= config.favicon_all %>/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= config.favicon_all %>/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="<%= config.favicon_all %>/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= config.favicon_all %>/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="<%= config.favicon_all %>/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= config.favicon_all %>/favicon-16x16.png">
+  <link rel="manifest" href="<%= config.favicon_all %>/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="<%= config.favicon_all %>/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+<% } else if (config.favicon) { %>
+  <link rel="shortcut icon" href="<%= config.favicon %>" type="image/png">
+<% } else { %>
   <link rel="shortcut icon" href="https://cdn.shopify.com/s/files/1/2980/5252/files/favicon_32x32.png?v=1521894486" type="image/png">
+<% } %>
