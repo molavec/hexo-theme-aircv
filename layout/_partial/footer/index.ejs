@@ -17,9 +17,10 @@ let footer = (site.data.footer !== undefined) ? site.data.footer : default_data(
             <% }  %>
           </div>
           <div class="col-xs-6 text-right sm-text-left">
-              <p class="margin-b-0"><a class="fweight-700" href="<%= footer.line01.href %>"><%= footer.line01.content %></a>
+              <p class="margin-b-0">
+                <%- footer.line_01 %>
                 <br>
-                <%- footer.line02.content %>
+                <%- footer.line_02 %>
             </p>
           </div>
       </div>
