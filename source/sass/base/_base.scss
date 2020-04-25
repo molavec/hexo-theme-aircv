@@ -12,6 +12,7 @@ html, html a, body {
 }
 
 body {
+    @include font($size: 18px, $weight: 400, $family: $font-family-base);
     position: relative;
     font-family: $font-family-base;
     color: $color-subtitle;

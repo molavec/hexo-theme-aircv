@@ -19,6 +19,12 @@
 		margin-bottom: 30px;
 	}
 
+	.service-button {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s, opacity 0.5s linear;
+	}
+
 	&:hover {
 		.service-element {
 			opacity: 0;
@@ -29,6 +35,20 @@
 		.service-info {
 			@include translate3d(0,-30%,0);
 			@include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
+		}
+
+		.service-button {
+			visibility: visible;
+  		opacity: 1;
+		}
+	}
+}
+
+@media (max-width: $screen-sm-max) {
+	.service {
+		.service-button {
+			visibility: visible;
+			opacity: 1;
 		}
 	}
 }
