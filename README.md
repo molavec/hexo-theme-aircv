@@ -6,21 +6,23 @@ This is Hexo Theme with a beautiful style design form [KeenThemes](http://www.ke
 
 ![model for landing in devices](doc/aircv.png)
 
+[![view demo](doc/demo-button.png)](https://aircv-hexo-theme.firebaseapp.com/)
+
 ## Install
 
-**1.- Copy aircv in your theme folder**
+1.- Copy aircv in your theme folder
 ```
 \themes
   \aircv
   \landscape
 ```
 
-**2.- Install `hexo-renderer-scss` to add scss support**
+2.- Install `hexo-renderer-scss` to add scss support
 ```bash
 $ npm install hexo-renderer-scss
 ```
 
-**3.- Config theme in `_config.yml`**
+3.- Config theme in `_config.yml`
 ```yaml
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -28,12 +30,11 @@ $ npm install hexo-renderer-scss
 theme: aircv
 ```
 
-**4.- Config theme in `_config.yml`**
-4.- Run local server
+4.- Run server and customize content (see below)
+
 ```bash
 $ hexo server
 ```
-**5.- Customize content (see below)**
 
 
 ## Customize your new site
@@ -44,13 +45,13 @@ You can configure content of every adding yaml files for every section `/source/
 
 Follow these steps:
 
-**1.- Copy `default_data yaml files` to `source\_data`.**
+1.- Copy `default_data yaml files` to `source\_data`.
 
 ```bash
 $ for file in themes/aircv/source/default_data/*.yaml; do cp "$file" source/_data ;done
 ```
 
-**2.- Modify every Yaml file as your convenience.**
+2.- Modify every Yaml file as your convenience.
 
-**3.- Be Happy and share!!**
+3.- Be Happy and share!!
 
