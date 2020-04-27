@@ -27,7 +27,7 @@ $ npm install hexo-renderer-scss
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: aircv
+theme: aircv-hexo-theme
 ```
 
 4.- Run server and customize content (see below)
@@ -41,7 +41,7 @@ $ hexo server
 
 It is  a "one page" landing with well defined section.
 
-You can configure content of every adding yaml files for every section `/source/_data` directory follow yaml example files in `themes/aircv/source/default_data`.
+You can configure content of your page adding yaml files for every section in your `/source/_data` following yaml example files in `themes/aircv/source/default_data`.
 
 Follow these steps:
 
