@@ -1,6 +1,6 @@
 # Aircv Hexo Theme
 
-This is Hexo Theme with a beautiful style design form [KeenThemes](http://www.keenthemes.com/).
+This is Hexo Theme with a beautiful style design by [KeenThemes](http://www.keenthemes.com/).
 
 **Is very usefull for personal branding.**
 
