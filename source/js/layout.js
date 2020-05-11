@@ -82,7 +82,7 @@ var Layout = function () {
         });
     }
 
-    // handle group element heights
+    // handle group element heights experience
     var handleHeight = function() {
        $('[data-auto-height]').each(function() {
             var parent = $(this);

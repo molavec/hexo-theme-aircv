@@ -4,6 +4,7 @@
 
 .btn-theme {
 	@include button();
+	@include font($size: 18px, $weight: 400, $family: $font-family-base);
 }
 
 .btn-icon {

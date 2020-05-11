@@ -1,0 +1,19 @@
+<%# --- first post --- %>
+<div class="post first-post">
+  <h1><a href="<%= url_for(post.path) %>"> <%= post.title %> </a></h1>
+  <p class="date"> <%= post.date %> </p>
+  <% if(post.thumb_image) { %>
+    <p>
+      <img src="<%= url_for(post.path) + post.thumb_image %>" />
+    </p>
+  <% } %>
+  <% if(post.excerpt) {%>
+    <p> <%= post.excerpt %> </p>
+  <% } else if(post.description) { %>
+    <p> <%= truncate( post.description, {length: 550, omission: '...'}) %> </p>
+  <% } else{ %>
+    <p> <%= truncate( strip_html(post.more), {length: 550, omission: '...'}) %> </p>
+  <% } %>
+  <p class="continue"><a href="<%= url_for(post.path) %>" class="btn">Continue reading...</a></p>
+</div>
+<%# --- end first post --- %>

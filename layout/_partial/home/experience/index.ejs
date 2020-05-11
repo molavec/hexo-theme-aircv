@@ -13,7 +13,7 @@ let experience = (site.data.experience !== undefined) ? site.data.experience : d
               <div class="col-sm-3 sm-margin-b-30">
                   <div class="text-right sm-text-left">
                       <h2 class="margin-b-0"><%= experience.title %></h2>
-                      <p><%= experience.subtitle %></p>
+                      <p><%- experience.subtitle %></p>
                   </div>
               </div>
               <div class="col-sm-8 col-sm-offset-1">
@@ -25,8 +25,13 @@ let experience = (site.data.experience !== undefined) ? site.data.experience : d
                                     <i class="service-icon <%= item.icon %>"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3 <% if(item.featured) { %> class="color-white" <% } %> > <%= item.title %></h3>
-                                    <p class=" <% if(item.featured) { %> color-white <% } %> margin-b-5"><%- item.content %></p>
+                                    <h3 <% if(item.featured) { %> class="color-white" <% } %> > <%- item.title %></h3>
+                                    <p class=" <% if(item.featured) { %> color-white <% } %>"><%- item.content %></p>
+                                    <% if(item.button) { %>
+                                        <div class="service-button">
+                                            <button class="btn btn-theme <%= (item.featured) ? 'btn-white-bg' : 'btn-default-bg' %>"> <%= item.button %> </button>
+                                        </div>
+                                    <% } %>
                                 </div>
                                 <a href="<%= item.href %>" class="content-wrapper-link"></a>
                             </div>

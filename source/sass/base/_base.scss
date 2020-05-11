@@ -12,6 +12,7 @@ html, html a, body {
 }
 
 body {
+    @include font($size: 18px, $weight: 400, $family: $font-family-base);
     position: relative;
     font-family: $font-family-base;
     color: $color-subtitle;
@@ -120,6 +121,15 @@ h4 { @include font($size: 22px); }
     display: block;
     z-index: 3;
     text-decoration: none;
+}
+
+.video-container{
+    width: 100%;
+    text-align: center;
+    iframe {
+        min-width: 80%;
+        height: calc(100vw * 9/16 - 20vw * 9/16);
+    }
 }
 
 @media (max-width: $screen-sm-max) {

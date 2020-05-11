@@ -1,0 +1,46 @@
+<% if(post.thumb_image) { %>
+<%# --- next posts --- %>
+<div class="post">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="<%= url_for(post.path) + post.thumb_image %>" />
+    </div>
+    <div class="col-md-8">
+      <h1><a href="<%= url_for(post.path) %>"> <%= post.title %> </a></h1>
+      <p class="date"> <%= post.date %> </p>
+      <% if(post.excerpt) {%>
+        <p> <%= post.excerpt %> </p>
+      <% } else if(post.description) { %>
+        <p> <%= truncate( post.description, {length: 550, omission: '...'}) %> </p>
+      <% } else { %>
+        <p> <%= truncate( strip_html(post.more), {length: 550, omission: '...'}) %> </p>
+      <% } %>
+    </div>
+  </div>
+  <div>
+    <p class="continue"><a href="<%= url_for(post.path) %>" class="btn">Continue reading...</a></p>
+  </div>
+</div>
+<%# --- end next posts --- %>
+<% } else { %>
+<%# --- next posts no image --- %>
+<div class="post">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><a href="<%= url_for(post.path) %>"> <%= post.title %> </a></h1>
+      <p class="date"> <%= post.date %> </p>
+      <% if(post.excerpt) {%>
+        <p> <%= post.excerpt %> </p>
+      <% } else if(post.description) { %>
+        <p> <%= truncate( post.description, {length: 550, omission: '...'}) %> </p>
+      <% } else{ %>
+        <p> <%= truncate( strip_html(post.more), {length: 550, omission: '...'}) %> </p>
+      <% } %>
+    </div>
+  </div>
+  <div>
+    <p class="continue"><a href="<%= url_for(post.path) %>" class="btn">Continue reading...</a></p>
+  </div>
+</div>
+<% } %>
+<%# --- end next posts no image --- %>

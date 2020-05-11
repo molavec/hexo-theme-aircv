@@ -15,28 +15,42 @@ let portfolio = (site.data.portfolio !== undefined) ? site.data.portfolio : defa
       <div class="work work-popup-trigger">
           <div class="work-overlay">
               <img class="full-width img-responsive" src="<%= item.image %>" alt="Portfolio Image">
+              <div class="work-overlay-label">
+                <p> <%= item.title %></p>
+              </div>
           </div>
           <div class="work-popup-overlay">
               <div class="work-popup-content">
-                  <a href="javascript:void(0);" class="work-popup-close"><%= item.popup.hide_text %></a>
+                  <a href="javascript:void(0);" class="work-popup-close"><%= item.hide_text %></a>
                   <div class="margin-b-30">
-                      <h3 class="margin-b-5"><%= item.popup.hide_text %></h3>
-                      <span><%- item.popup.subtitle %></span>
+                      <h3 class="margin-b-5"><%= item.title %></h3>
+                      <span><%- item.subtitle %></span>
                   </div>
                   <div class="row">
                       <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
                           <div class="margin-t-10 sm-margin-t-0">
-                            <%- item.popup.description %>
-                              <ul class="list-inline work-popup-tag">
-                                  <% item.popup.tags.forEach( tag => { %>
-                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="<%= tag.href %>"><%= tag.text %></a></li>
-                                  <% }) %>
-                              </ul>
+                            <%- item.description %>
+                            <% if(item.cta) {%>
+                              <p>
+                                <b><a href="<%= item.href %>"> <%= item.cta %> </a></b>
+                              </p>
+                            <% } %>
+                            <ul class="list-inline work-popup-tag">
+                                <% item.tags.forEach( tag => { %>
+                                  <li class="work-popup-tag-item">
+                                    <% if (tag.href) { %>
+                                      <a class="work-popup-tag-link" href="<%= tag.href %>"><%= tag.text %></a>
+                                    <% } else { %>
+                                      <span class="work-popup-tag-text"> <%= tag.text %> </span>
+                                    <% } %>
+                                  </li>
+                                <% }) %>
+                            </ul>
                           </div>
                       </div>
                       <div class="col-sm-4">
                           <div class="margin-t-10 sm-margin-t-0">
-                            <% item.popup.parameters.forEach( param => { %>
+                            <% item.parameters.forEach( param => { %>
                               <p class="margin-b-5"><strong><%= param.title %>:</strong> <%- param.text %></p>
                             <% }) %>
                           </div>
