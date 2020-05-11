@@ -17,9 +17,9 @@ This is Hexo Theme with a beautiful style design by [KeenThemes](http://www.keen
   \landscape
 ```
 
-2.- Install `hexo-renderer-scss` to add scss support and `hexo-filter-responsive-images` to get responsive images.
+2.- Install theme dependencies.
 ```bash
-$ npm install hexo-renderer-scss hexo-filter-responsive-images
+$ yarn add hexo-renderer-scss hexo-filter-responsive-images image-size imageinfo js-yaml
 ```
 
 3.- Config theme in `_config.yml`
