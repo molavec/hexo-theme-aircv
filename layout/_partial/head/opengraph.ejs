@@ -54,7 +54,7 @@
     //console.log(infoSmall.width * info.height / info.width)
 
   //if not post or page use home page hero image
-  } else if (site.data.hero.image) {
+  } else if (site.data.hero !== undefined && site.data.hero.image) {
 
     //get url and info for image
     imageSource = site.data.hero.image;

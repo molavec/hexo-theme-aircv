@@ -1,6 +1,6 @@
 <%# Códigos de tracking%>
 
-<% if(config.tracking_code.gtm) { %>
+<% if(config.tracking_code !== undefined && config.tracking_code.gtm) { %>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

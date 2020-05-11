@@ -1,4 +1,4 @@
-<% if(config.tracking_code.gtm) { %>
+<% if(config.tracking_code !== undefined && config.tracking_code.gtm) { %>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<%= config.tracking_code.gtm %>"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
