@@ -1,8 +1,8 @@
 {
-  "name": "aircv-hexo-theme",
+  "name": "hexo-theme-aircv",
   "version": "1.0.0",
   "description": "Hexo theme based in aircv.",
-  "repository": "https://github.com/molavec/aircv-hexo-theme",
+  "repository": "https://github.com/molavec/hexo-theme-aircv",
   "author": "Miguel Olave",
   "license": "MIT",
   "devDependencies": {

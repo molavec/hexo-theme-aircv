@@ -6,7 +6,7 @@ This is Hexo Theme with a beautiful style design by [KeenThemes](http://www.keen
 
 ![model for landing in devices](doc/aircv.png)
 
-[![view demo](doc/demo-button.png)](https://aircv-hexo-theme.firebaseapp.com/)
+[![view demo](doc/demo-button.png)](https://hexo-theme-aircv.molavec.com/)
 
 ## Install
 
@@ -27,7 +27,7 @@ $ npm install hexo-renderer-scss hexo-filter-responsive-images
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: aircv-hexo-theme
+theme: hexo-theme-aircv
 ```
 
 4.- Run server and customize content (see below)
