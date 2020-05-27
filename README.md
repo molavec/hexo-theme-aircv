@@ -19,7 +19,7 @@ This is Hexo Theme with a beautiful style design by [KeenThemes](http://www.keen
 
 2.- Install theme dependencies.
 ```bash
-$ yarn add hexo-renderer-scss hexo-filter-responsive-images image-size imageinfo js-yaml
+$ yarn add hexo-renderer-scss hexo-filter-responsive-images imageinfo js-yaml
 ```
 
 3.- Config theme in `_config.yml`
