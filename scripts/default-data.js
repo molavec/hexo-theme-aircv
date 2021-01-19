@@ -16,7 +16,7 @@ hexo.extend.helper.register('defaultData', (filename) => {
 
   try {
     let fileContents = fs.readFileSync(__dirname + `/../source/_default_data/${filename}.yaml`, 'utf8');
-		return yaml.safeLoad(fileContents);
+		return yaml.load(fileContents);
   } catch (e) {
     console.log(e);
     return null;
