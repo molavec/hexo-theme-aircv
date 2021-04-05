@@ -4,10 +4,5 @@
   "description": "Hexo theme based in aircv.",
   "repository": "https://github.com/molavec/hexo-theme-aircv",
   "author": "Miguel Olave",
-  "license": "MIT",
-  "devDependencies": {
-    "image-size": "^0.8.3",
-    "imageinfo": "^1.0.4",
-    "js-yaml": "^3.13.1"
-  }
+  "license": "MIT"
 }
