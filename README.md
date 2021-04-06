@@ -2,20 +2,37 @@
 
 This is Hexo Theme with a beautiful style design by [KeenThemes](http://www.keenthemes.com/).
 
-**Is very usefull for personal branding.**
+**This design a very usefull for personal branding.**
 
 ![model for landing in devices](doc/aircv.png)
 
 [![view demo](doc/demo-button.png)](https://hexo-theme-aircv.molavec.com/)
 
+
+## Features
+
+* Easy to customize.
+* Blog Ready.
+* Open Graph Metadata Ready.
+* Responsive.
+
 ## Install
 
 1.- Copy aircv in your theme folder
+
 ```
 \themes
-  \aircv
+  \hexo-theme-aircv
   \landscape
 ```
+
+Alternative add it as submodule with git:
+
+```bash 
+$ cd themes
+$ git submodule add https://github.com/molavec/hexo-theme-aircv.git
+```
+
 
 2.- Install theme dependencies your main hexo project.
 ```bash
@@ -30,7 +47,7 @@ $ yarn add -D hexo-renderer-scss hexo-filter-responsive-images imageinfo js-yaml
 theme: hexo-theme-aircv
 ```
 
-4.- Run server and customize content (see below)
+4.- Build and run server 
 
 ```bash
 $ hexo server
@@ -39,28 +56,35 @@ $ hexo server
 
 ## Customize your new site
 
-It is  a "one page" landing with well defined section.
+It is a "one page" landing with well defined section.
 
-You can configure content of your page adding yaml files for every section in your `/source/_data` following yaml example files in `themes/aircv/source/default_data`.
+You can configure content of your page adding yaml files for every section in your `/source/_data` following yaml example files in `themes/heco-theme-aircv/source/default_data`.
 
 Follow these steps:
 
 1.- Copy `default_data yaml files` to `source\_data`.
 
 ```bash
-$ for file in themes/aircv/source/default_data/*.yaml; do cp "$file" source/_data ;done
+$ for file in themes/heco-theme-aircv/source/default_data/*.yaml; do cp "$file" source/_data ;done
 ```
 
-2.- Modify every Yaml file as your convenience.
+2.- Modify every *yaml* file as your convenience.
 
 3.- Be Happy and share!!
 
 ## Tips to configure
 
 ### Cover hero image
-As this template use [parallax.js](https://pixelcog.github.io/parallax.js/) just use `data-position` attribute in `_partial/home/hero/index.ejs` to ajust hero image for responsive or use `_promo-block.scss`.
 
-**Example:**
+Set image text and image in `source/_data/hero.yaml`
+
+```yaml
+title: "Miguel<br>Olave"
+proposal_value: "Desarrollador &amp; UX Project Manager"
+image: "img/hero.jpg"
+```
+
+As this template use [parallax.js](https://pixelcog.github.io/parallax.js/) just use `data-position` attribute in `_partial/home/hero/index.ejs` to ajust hero image for responsive or use `_promo-block.scss`.
 
 ```html
 <div class="promo-block parallax-window"
@@ -84,13 +108,12 @@ favicon_all: '/img/molavec-ico'
 ### how to add post list (archives) to menu
 
 1. select `archive_dir` in `_config.yml`
-2. add menú to `source/_data/menu.yaml`
-
 ```yaml
 #_config.yml
 archive_dir: blog
 ```
 
+2. add menu to `source/_data/menu.yaml`
 ```yaml
 #source/_data/menu.yaml
 - text: Blog
@@ -98,8 +121,9 @@ archive_dir: blog
 ```
 
 ### Configure responsive images
+In `_config.yml` add settings for responsive images. 
 
-In `_config.yml` add settings for responsive images.
+**Note:** It is used in this theme to generate Open Graph images.
 
 ```yaml
 responsive_images:
