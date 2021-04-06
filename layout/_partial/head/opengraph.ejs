@@ -9,91 +9,104 @@
 
 
 <%
-  // TODO: Verificar que pasa con la ruta relativa en las páginas.
-  let imageSource = null;
-  let info = null;
-  let infoSmall = {};
+
+  let imagePath = null;
   let imageUrl = null;
+  let info = null;
+  let imageUrlSmall = null;
+  let infoSmall = null;
 
   let removeExtension = (filePath) => (filePath.split('.').slice(0, -1).join('.'))
   let removeFinalItems = (filePath, itemQty=1) => (filePath.split('/').slice(0, -itemQty).join('/'))
   let getFinalItems = (filePath, itemQty=1) => (filePath.split('/').slice(-itemQty).join('/'))
 
-  //if post or page
+  //IF post, draft or page
   if (page.thumb_image) {
-    // If post we know image is..
+    // check if it is in _post directory
     if(/post/.test(page.source) || /draft/.test(page.source)){
-
       // post case - directory with same name of file in _post/ directory
-      imageSource = removeExtension(page.source) + '/' + page.thumb_image
-      //get image url for small image
-      imageUrlSmall = config.url + url_for(page.path) + 'small_' +page.thumb_image;
-
-
+      // draft case - directory with same name of file in _draft/ directory
+      imagePath = removeExtension(page.source) + '/' + page.thumb_image
+    // or it is in a page...
     } else {
-
-      //if not (possible page) relative to path of file
-      imageSource = removeFinalItems(page.source) + '/' + page.thumb_image
-      //get image url for small image
-      imageUrlSmall = config.url + removeExtension(url_for(page.path)) + '/' + removeFinalItems(page.thumb_image)+ '/small_' + getFinalItems(page.thumb_image);
-
+      // page case - image is in page directory
+      imagePath = removeFinalItems(page.source) + '/' + page.thumb_image
     }
-
     //get info for image
-    imageUrl = config.url + url_for(page.path) + page.thumb_image;
-    info = imageInfo(imageSource);
+    imageUrl = config.url + url_for(page.path) + 'small_' + page.thumb_image;
+    info = imageInfo(imagePath);
 
-    //get info for small image
+    //small image
+    imageUrlSmall = config.url + url_for(page.path) + 'small_' + page.thumb_image;
+    infoSmall = {};
     infoSmall.mimeType = info.mimeType;
     infoSmall.width = config.responsive_images.sizes.small.width;
     infoSmall.height = Math.round(infoSmall.width * info.height / info.width);
 
-    //console.log("1.- "+ page.source)
-    //console.log("2.- "+ imageSource)
-    //console.log(infoSmall)
-    //console.log(infoSmall.width * info.height / info.width)
+    // console.log("1.- " + page.source)
+    // console.log("2.- " + imagePath)
+    // console.log("3.- " + imageUrl)
+    // console.log("4.- ")
+    // console.log(info)
+    // console.log("5.- " + imageUrlSmall)
+    // console.log("6.- ")
+    // console.log(infoSmall)
+    // console.log("7.- " + infoSmall.width * info.height / info.width)
 
   //if not post or page use home page hero image
   } else if (site.data.hero !== undefined && site.data.hero.image) {
 
     //get url and info for image
-    imageSource = site.data.hero.image;
-    imageUrl = config.url + '/' + imageSource;
-    info = imageInfo(imageSource);
+    imagePath = site.data.hero.image;
+    imageUrl = config.url + '/' + imagePath;
+    info = imageInfo(imagePath);
 
     // get url and info for small image
-    let imageSourceSmall = removeFinalItems(site.data.hero.image) + '/small_' + getFinalItems(site.data.hero.image);
-    imageUrlSmall = config.url + '/' + imageSourceSmall;
+    imageUrlSmall = config.url + '/' + removeFinalItems(site.data.hero.image) + '/small_' + getFinalItems(site.data.hero.image);
+    infoSmall = {};
     infoSmall.mimeType = info.mimeType;
     infoSmall.width = config.responsive_images.sizes.small.width;
     infoSmall.height = Math.round(infoSmall.width * info.height / info.width);
 
-    //console.log("1.- "+ page.path)
-    //console.log("2.- "+ imageUrlSmall)
-    //console.log(infoSmall)
-    //console.log(infoSmall.width * info.height / info.width)
+    // console.log("1.- " + page.source)
+    // console.log("2.- " + imagePath)
+    // console.log("3.- " + imageUrl)
+    // console.log("4.- ")
+    // console.log(info)
+    // console.log("5.- " + imageUrlSmall)
+    // console.log("6.- ")
+    // console.log(infoSmall)
+    // console.log("7.- " + infoSmall.width * info.height / info.width)
 
   } else {
+
+    imageUrl = null;
     info = null;
+    imageUrlSmall = null;
     infoSmall = null;
   }
 
+  // PRINT OPEN GRAPH METADATA
   // if thumb_image or site.data.hero.image exists
   if (imageUrl !== null && info !== null) {
-%>
+  %>
+  
   <meta property="og:image" content="<%= imageUrl %>">
   <meta property="og:image:type" content="<%= info.mimeType%>">
   <meta property="og:image:width" content="<%= info.width%>">
   <meta property="og:image:height" content="<%= info.height%>">
-<%
+  
+  <%
   }
-  if ( infoSmall !== null) { // en caso de que exista imagen small
-%>
+  if (imageUrlSmall !== null && infoSmall !== null) { // en caso de que exista imagen small
+  %>
+  
   <meta property="og:image" content="<%= imageUrlSmall %>">
   <meta property="og:image:type" content="<%= infoSmall.mimeType%>">
   <meta property="og:image:width" content="<%= infoSmall.width%>">
   <meta property="og:image:height" content="<%= infoSmall.height%>">
-<% } %>
+  
+  <% } %>
 
 <%#
 <meta property="og:image" content="/uploads/oX0/cool_ideas/ci_og_image_400.jpg">
