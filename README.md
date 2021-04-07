@@ -53,6 +53,13 @@ theme: hexo-theme-aircv
 $ hexo server
 ```
 
+## Settings
+In `_congif.yml`
+
+Post should be have his own asset folder
+```yaml
+post_asset_folder: true
+```
 
 ## Customize your new site
 
